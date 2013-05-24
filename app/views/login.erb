@@ -1,0 +1,14 @@
+<% if @errors %>
+  <div class="errors">
+    <p><%= @errors %></p>
+  </div>
+<% end %>
+
+<form id="form_signin" action="/login" method="post">
+
+  <input name="username"  type="text"     placeholder="username">
+  <input name="password"  type="password" placeholder="password">
+
+  <button type="submit">Sign In</button>
+
+</form>

@@ -1,6 +1,6 @@
 class Photo < ActiveRecord::Base
 
-  mount_uploader :image, AvatarUploader
+  mount_uploader :image, MyUploader
 
   belongs_to :album
 

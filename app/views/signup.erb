@@ -1,0 +1,17 @@
+<% if @errors %>
+  <div class="errors">
+    <% @errors.each do |key, value| %>
+        <p><%= key %>: <%= value.join(", ") %></p>
+    <% end %>
+  </div>
+<% end %>
+
+<form id="form_signup" action="/signup" method="post">
+
+  <input name="username"  type="text"     placeholder="username">
+  <input name="email"     type="text"     placeholder="email">
+  <input name="password"  type="password" placeholder="password">
+
+  <button type="submit">Create Account</button>
+
+</form>

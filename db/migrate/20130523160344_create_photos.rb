@@ -4,6 +4,8 @@ class CreatePhotos < ActiveRecord::Migration
       p.string :title
       p.string :image
       p.integer :album_id
+
+      p.timestamps
     end
   end
 end
