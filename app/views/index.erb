@@ -1,0 +1,5 @@
+<ul>
+  <% Album.all.each do |album| %>
+    <li><a href="/album/<%= album.id %>"><%= album.name %></a>: <%= album.photos.count %> Photos</li>
+  <% end %>
+</ul>

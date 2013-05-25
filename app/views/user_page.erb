@@ -1,0 +1,28 @@
+<h2>Create New Album</h2>
+<form id="new_album" action="/create_album" method="post">
+  <input type="text" name="new_album" placeholder="New Album Name">
+  <button type="submit">Create New Album</button>
+</form>
+
+<hr>
+
+<h2>Add New Photo</h2>
+<form id="post_photo" action="/upload_photo" method="post" enctype="multipart/form-data">
+  <select name="albums" >
+    <% current_user.albums.each do |album| %>
+      <option value="<%= album.id %>"><%= album.name %></option>
+    <% end %>
+  </select>
+  <input type="text" name="title" placeholder="Title">
+  <input type="file" name="image">
+  <button type="submit">Add New Photo</button>
+</form>
+
+<hr>
+
+<h2>My Albums</h2>
+<ul>
+  <% current_user.albums.each do |album| %>
+    <li><a href="/album/<%= album.id %>"><%= album.name %></a>: <%= album.photos.count %></li>
+  <% end %>
+</ul>

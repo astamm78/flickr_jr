@@ -1,0 +1,8 @@
+<h1><%= Album.find(album_id).user.username %></h1>
+
+<h2>Album Name: <%= Album.find(album_id).name %></h2>
+
+<% Album.find(album_id).photos.each do |photo| %>
+  <h3><%= photo.title %></h3>
+  <a href="/album/<%= album_id %>/photo/<%= photo.id %>"><img src="<%= photo.image.url %>" width="600" ></a>
+<% end %>

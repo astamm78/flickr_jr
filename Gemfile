@@ -13,14 +13,15 @@ gem 'thin'
 gem 'activesupport'
 gem 'activerecord'
 
-gem 'rake'
-
-gem 'shotgun'
-
+gem 'faker'
 gem 'carrierwave'
 gem "mini_magick"
 
 gem 'bcrypt-ruby'
+
+gem 'rake'
+
+gem 'shotgun'
 
 group :test do
   gem 'faker'
